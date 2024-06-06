@@ -4,7 +4,7 @@ Feature: Filling out the student registration form
       Given User navigates to the application
 
      Scenario Outline: Fill in all available fields
-      When User enter first name as "<firstName>"
+      And User enter first name as "<firstName>"
       And User enter last name as "<lastName>"
       And User enter email as "<email>"
       And User selects gender
