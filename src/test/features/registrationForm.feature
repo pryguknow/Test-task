@@ -15,7 +15,7 @@ Feature: Filling out the student registration form
       And the user attaches the picture
       And User enter current address as "<address>"
       And User select "<state>" and "<city>"  
-      And User click on the submit button
+      When User click on the submit button
       Then The form displays correct information about the user 
 
 
@@ -27,4 +27,15 @@ Feature: Filling out the student registration form
       | tets22    | de test test| 111qate_-st@mm2442wd.cc    | Male   | 11223334563423 | 01 Oct 1999      | Sport   | sdsaddsadasda_-2@ | Rajasthan    | Jaipur  |
 
 
+    # Scenario: Validate all elements on registration form
+    #   Given User click on "submit" button with empty elements
+    #   Then All elements are outlined red
+    #   When User fills "first name" and "last name" fields
+    #   Then User fills"First name" and "Last name" fields are outlined green
+    #   When User fills "email" and "last name" fields
+    #   Then "Email" field in outlined green
+    #   When User selects gender
+    #   Then "Gender" field outlined green
+    #   When User fills "Mobile" field
+    #   Then "Mobile field outlined green
 

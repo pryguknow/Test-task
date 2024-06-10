@@ -1,3 +1,4 @@
+import { stubObject } from "lodash";
 import type { TSelectorsList, TStringArrayInObject } from "../types/types";
 
 
@@ -25,4 +26,22 @@ export const statesListSelectors: TSelectorsList = {
     UttarPradesh: "#react-select-3-option-1",
     Haryana: "#react-select-3-option-2",
     Rajasthan: "#react-select-3-option-3"
+};
+
+export const fieldsListSelectors: TSelectorsList = {
+    firstNameField: "#firstName",
+    lastNameField: "#lastName",
+    emailField: "#userEmail",
+    mobileField: "#userNumber",
+    dateOfBirthField: "#dateOfBirthInput",
+    subjectsField: "#subjectsInput",
+    currentAdressField: "#currentAddress",
+    stateField: "#state",
+    cityField: "#city"
+}
+
+
+export const buttonsListSelectors: TSelectorsList = {
+    chooseFileButton: "#uploadPicture",
+    submitButton: "#submit"
 };

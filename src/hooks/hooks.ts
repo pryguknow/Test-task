@@ -2,6 +2,7 @@ import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep, Status } from "@cucumber/cucumber";
 
+
 let page: Page;
 let browser: Browser;
 let context: BrowserContext;
@@ -34,3 +35,9 @@ After(async function ({ pickle, result}) {
 AfterAll(async function () {
     await browser.close();
 });
+
+// AfterStep(async function(){
+//     if(await pageFixture.page.locator("").isVisible() || await pageFixture.page.locator("").isVisible()){
+//         // need logic for page error validation
+//     }
+// })
