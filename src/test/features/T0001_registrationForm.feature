@@ -15,7 +15,7 @@ Feature: Filling out the student registration form
       And the user attaches the picture
       And User enter current address as "<address>"
       And User select "<state>" and "<city>"  
-      And User click on the submit button
+      When User click on the submit button
       Then The form displays correct information about the user 
 
 
@@ -25,6 +25,5 @@ Feature: Filling out the student registration form
       | lana      | test        | la-.09natesnW2313@gmail.io | Female | 12345678901    | 24 Sep 2029      | Reading | test 22           | UttarPradesh | Merrut  |
       | TeStOtEsT | De Test     | d_ddddd@d18.comtt          | Other  | 0000000000     | 30 Jun 2000      | Music   | @sss 44ab         | Haryana      | Panipat |
       | tets22    | de test test| 111qate_-st@mm2442wd.cc    | Male   | 11223334563423 | 01 Oct 1999      | Sport   | sdsaddsadasda_-2@ | Rajasthan    | Jaipur  |
-
 
 
