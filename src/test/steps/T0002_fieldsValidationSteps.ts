@@ -13,7 +13,7 @@ Then('All fields are outlined in red', async function (){
         if (fieldsListSelectors[selectorName] === "#dateOfBirthInput"){
             continue;
         }
-      await elementValidation(this, fieldsListSelectors[selectorName], "invalid",'#subjectsContainer')
+      await elementValidation(this, fieldsListSelectors[selectorName], "invalid","#subjectsWrapper");
 }
 
 })
