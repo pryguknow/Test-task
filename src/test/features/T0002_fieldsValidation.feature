@@ -31,7 +31,7 @@ Feature: Validation all fields for registration form
       When User enter invalid subjects as "<invalidSubjects>" or leaving it blank
       Then Subjects field still empty
       And Subjects field is outlined in red     
-      When User enter any info in  current address field
+      When User enter any info in current address field
       Then Current address field outlined in green
       When Clear current address field
       Then Current address field outlined in red
@@ -40,7 +40,7 @@ Feature: Validation all fields for registration form
 
 Examples:
 
-      | validFirstName | invalidFirstName | validLastName | invalidLastName | validEmail        | invalidEmail     | validMobile | invalidMobile | validSubjects | invalidSubjects |
-      | Kim            | 3333333333       | Testlast      | 3333333333      | test@tetetet.ww   | testmail.com     | 1234567890  | 232323        | English       | sss             |
-      | martin         | @&?/             | de testing    | @&?/            | teStStsT@gg.qwert | qqq@wer.qwertyui | 9999999999  | qqq1234567890 | Maths         | qwerty          |
+      | validFirstName | validLastName | validEmail        | invalidEmail     | validMobile | invalidMobile | validSubjects | invalidSubjects |
+      | Kim            | Testlast      | test@tetetet.ww   | testmail.com     | 1234567890  | 232323        | English       | sss             |
+      | martin         | de testing    | teStStsT@gg.qwert | qqq@wer.qwertyui | 9999999999  | qqq1234567890 | Maths         | qwerty          |
 

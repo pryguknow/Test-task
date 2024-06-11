@@ -6,17 +6,17 @@ import { softAssertions } from "./softAssetions";
 export async function elementValidation (context: any, selector:string, validity:string, exceptions: any){
     try {
         await pageFixture.page.waitForSelector(selector);
-        expect(await pageFixture.page.isVisible(`${selector}:${validity}`)).toBeTruthy();
+        expect(await pageFixture.page.isVisible(`${selector}${validity}`)).toBeTruthy();
     } catch (error: unknown){
-        const message: string = `Element ${selector} isn't invalid state`
+        const message: string = `Element ${selector} isn't ${validity} state`
             let screenshotBuffer: Buffer | undefined;
 
-            if ((exceptions != null ) && (selector === exceptions)){
-                screenshotBuffer = await pageFixture.page.locator(exceptions).screenshot();
+            if (exceptions && (exceptions === selector)){
+                screenshotBuffer = await pageFixture.page.locator("#subjectsWrapper").screenshot();
             } else {
                 screenshotBuffer = await pageFixture.page.locator(selector).screenshot();
             };
-            //screenshotBuffer = await pageFixture.page.locator(selector).screenshot();
+            
             
             softAssertions.addError(message, screenshotBuffer?.toString('base64'));
             

@@ -3,7 +3,7 @@ import { pageFixture } from "../../hooks/pageFixture";
 import { expect } from "@playwright/test";
 import { statesListSelectors, hobbiesSelectors, genderSelectors, fieldsListSelectors, buttonsListSelectors } from "../../helper/locators/registrationFormPage"
 import { citiesList } from "../../helper/locators/registrationFormPage";
-import { createCitySelector } from "../../helper/scripts/givenSeletors";
+import { createCitySelector } from "../../helper/scripts/createCitySelector";
 
 
 
