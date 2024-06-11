@@ -4,7 +4,7 @@
             "snippetInterface": "async-await"
         },
         "paths":[
-        "src/test/features/"
+        "src/test/features/T0002_fieldsValidation.feature"
     ],
     "pablishQuiet": true,
     "dryRun": false,

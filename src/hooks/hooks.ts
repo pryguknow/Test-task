@@ -12,7 +12,6 @@ BeforeAll( async function () {
 });
 
 Before(async function () {
-
     context = await browser.newContext();
     page = await browser.newPage();
     pageFixture.page = page;

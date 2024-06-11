@@ -90,6 +90,7 @@ Given('User select {string} and {string}', async function (state: string, city: 
 When('User click on the submit button', async function () {
     await pageFixture.page.waitForSelector(buttonsListSelectors.submitButton, {timeout: 5000, state: "visible"});
     await pageFixture.page.click(buttonsListSelectors.submitButton);
+    await pageFixture.page.waitForSelector('.was-validated');
 });
              
 Then('The form displays correct information about the user', async function () {
