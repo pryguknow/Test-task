@@ -34,9 +34,3 @@ After(async function ({ pickle, result}) {
 AfterAll(async function () {
     await browser.close();
 });
-
-// AfterStep(async function(){
-//     if(await pageFixture.page.locator("").isVisible() || await pageFixture.page.locator("").isVisible()){
-//         // need logic for page error validation
-//     }
-// })
