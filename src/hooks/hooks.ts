@@ -1,6 +1,6 @@
 import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
-import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep, Status } from "@cucumber/cucumber";
+import { After, AfterAll, Before, BeforeAll, Status } from "@cucumber/cucumber";
 
 
 let page: Page;
