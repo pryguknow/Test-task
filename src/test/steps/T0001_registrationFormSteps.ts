@@ -4,6 +4,7 @@ import { expect } from "@playwright/test";
 import { statesListSelectors, hobbiesSelectors, genderSelectors, fieldsListSelectors, buttonsListSelectors } from "../../helper/locators/registrationFormPage"
 import { citiesList } from "../../helper/locators/registrationFormPage";
 import { createCitySelector } from "../../helper/scripts/createCitySelector";
+import { waitForDebugger } from "inspector";
 
 
 
@@ -97,3 +98,12 @@ Then('The form displays correct information about the user', async function () {
         await pageFixture.page.waitForSelector(".modal-content");
         await expect(pageFixture.page.locator("#example-modal-sizes-title-lg")).toHaveText("Thanks for submitting the form");
 });
+
+When('User goes to main page', async function () {
+    await pageFixture.page.goto("https://demoqa.com/");
+    await pageFixture.page.waitForLoadState();
+});
+
+Then('User see main page', async function () {
+    expect(await pageFixture.page.locator('.banner-image').isVisible()).toBeTruthy();
+})

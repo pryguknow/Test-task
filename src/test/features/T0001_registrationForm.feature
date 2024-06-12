@@ -16,7 +16,9 @@ Feature: Filling out the student registration form
       And User enter current address as "<address>"
       And User select "<state>" and "<city>"  
       When User click on the submit button
-      Then The form displays correct information about the user 
+      Then The form displays correct information about the user
+      When User goes to main page
+      Then User see main page
 
 
     Examples:
