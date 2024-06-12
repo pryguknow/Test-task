@@ -35,7 +35,7 @@ Feature: Validation all fields for registration form
       Then Current address field outlined in green
       When Clear current address field
       Then Current address field outlined in red
-      Then Checking for errors
+      Then Error checking
 
 
 Examples:

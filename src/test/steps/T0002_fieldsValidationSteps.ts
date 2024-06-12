@@ -9,7 +9,6 @@ import { getCurrentFormattedDate } from "../../helper/scripts/getCurrentFormatte
 
 
 Then('All fields are outlined in red', async function (){
-    //const errors: string[] = [];
     for (let selectorName in fieldsListSelectors){
         if (fieldsListSelectors[selectorName] === "#dateOfBirthInput"){
             continue;
@@ -134,7 +133,7 @@ Then ('Subjects field outlined in green', async function (){
     //await pageFixture.page.click("..subjects-auto-complete__multi-value__remove");
 })
 //
-//the same problem as for date of birth
+//             the same problem as for date of birth
 ///
 When('User enter invalid subjects as {string} or leaving it blank', async function (invalidSubjects){
 //     await pageFixture.page.locator(fieldsListSelectors.subjectsField).fill(invalidSubjects);
@@ -171,7 +170,7 @@ Then ('Current address field outlined in red', async function (){
 // Checking for previously logged errors
 
 
-Then('Checking for errors', function() {
+Then('Error checking', function() {
     const errors = softAssertions.getErrors();
     if (errors.length > 0) {
         errors.forEach(error => {
@@ -182,8 +181,8 @@ Then('Checking for errors', function() {
             }
         });
 
-        // Отмечаем тест как проваленный
-        expect(errors.length).toBe(0); // Это приведет к провалу шага, если есть ошибки
+        
+        expect(errors.length).toBe(0); 
     }
 })
 
